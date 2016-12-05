@@ -78,7 +78,7 @@ gama=np.array(np.zeros((num_data,num_label)))
 #循环直至收敛：
 #while(1):
 for round in range(100):
-    print(round,'\n')
+    print('round: ',round,'\n')
     for j in range(num_data):
         #print('j: ',j,'\n')
         for k in range(num_label):
@@ -134,8 +134,8 @@ correct=0
 for i in range(len(the_labels)):
     if map_f[the_labels[i]]==test_y[i]:correct+=1
 print(the_labels)
-print('数目：',correct,'正确率：',correct/len(the_labels))
 print('alpha:\n',alpha,'p\n\n',p,'\ngama\n',gama)
+print('数目：',correct,'/',len(test_y),'正确率：',correct/len(the_labels))
 
 
 
